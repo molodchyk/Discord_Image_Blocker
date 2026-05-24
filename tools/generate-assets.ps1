@@ -70,7 +70,7 @@ function Draw-MediaBubble($g, $x, $y, $w, $h, $scale, $showImageLabel) {
     $labelFont.Dispose()
   } else {
     $glyphBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(255, 41, 45, 59))
-    $sunSize = [Math]::Max(2, $scale * 0.07)
+    $sunSize = [Math]::Max(2, $scale * 0.09)
     $g.FillEllipse($glyphBrush, ($x + $w * 0.24), ($y + $h * 0.25), $sunSize, $sunSize)
 
     $mountains = New-Object System.Drawing.Drawing2D.GraphicsPath
@@ -87,12 +87,6 @@ function Draw-MediaBubble($g, $x, $y, $w, $h, $scale, $showImageLabel) {
     $g.FillPath($glyphBrush, $mountains)
     $mountains.Dispose()
     $glyphBrush.Dispose()
-
-    $dotBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(255, 88, 101, 242))
-    $dotSize = [Math]::Max(2, $scale * 0.055)
-    $g.FillEllipse($dotBrush, ($x + $w * 0.20), ($y + $h * 0.42), $dotSize, $dotSize)
-    $g.FillEllipse($dotBrush, ($x + $w * 0.28), ($y + $h * 0.42), $dotSize, $dotSize)
-    $dotBrush.Dispose()
   }
 }
 
