@@ -56,6 +56,7 @@ It only changes the visible web UI in your browser.
 - `STORE_LISTING.md` - Chrome Web Store listing index
 - `STORE_JUSTIFICATIONS.md` - single-purpose, host-permission, remote-code, and data-use justifications
 - `PRIVACY.md` - privacy policy
+- `PROJECT_PHILOSOPHY.md` - product scope and feature decision notes
 - `tools/generate-assets.ps1` - reproducible icon and promotional image generator
 - `LICENSE.txt` - GPL license text
 
@@ -90,6 +91,10 @@ Chrome Web Store listing copy is maintained separately in `store-listing/`, with
 ## Store Review
 
 Chrome Web Store permission and privacy justifications are documented in [STORE_JUSTIFICATIONS.md](STORE_JUSTIFICATIONS.md).
+
+## Project Philosophy
+
+Product scope and feature decisions are documented in [PROJECT_PHILOSOPHY.md](PROJECT_PHILOSOPHY.md).
 
 ## Privacy
 
