@@ -37,4 +37,4 @@ The extension does not sell, transfer, or disclose user data to third parties.
 ## Contact
 
 Project repository:
-https://github.com/molodchyk/DiscordImageBlocker
+https://github.com/molodchyk/Discord_Image_Blocker

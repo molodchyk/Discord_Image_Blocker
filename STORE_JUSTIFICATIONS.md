@@ -10,4 +10,4 @@ The extension runs `content.js` on Discord pages so it can find image media elem
 
 ## URL der Datenschutzerklärung
 
-https://github.com/molodchyk/DiscordImageBlocker/blob/main/PRIVACY.md
+https://github.com/molodchyk/Discord_Image_Blocker/blob/main/PRIVACY.md
