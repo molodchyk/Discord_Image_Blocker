@@ -3,6 +3,7 @@
     "message": "Discord Image Blocker"
   },
   "extensionDescription": {
-    "message": "Hides image media on Discord to reduce distractions."
+    "message": "Discord上の画像メディアを非表示にして、気が散る要素を減らします。"
   }
 }
+

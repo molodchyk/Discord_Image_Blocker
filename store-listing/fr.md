@@ -1,4 +1,5 @@
-Discord Image Blocker hides image media that users send in Discord chat. It is useful when you want a calmer chat view with fewer visual distractions.
+Discord Image Blocker masque les images que les utilisateurs envoient dans le chat Discord. C'est utile lorsque vous voulez une vue de chat plus calme, avec moins de distractions visuelles.
 
-The extension is open source:
-https://github.com/molodchyk/DiscordImageBlocker
+L'extension est open source :
+https://github.com/molodchyk/Discord_Image_Blocker
+

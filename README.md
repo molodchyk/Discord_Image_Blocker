@@ -10,7 +10,7 @@ A tiny Chrome extension that hides image media on `discord.com`.
 
 ## Why
 
-Have you ever seen an image on Discord that was worth your attention? Discord Image Blocker removes image media from chat so Discord is calmer and less distracting.
+Discord Image Blocker hides image media in Discord chat when you want a calmer view with fewer visual distractions.
 
 The extension has one job, runs only on Discord, and does not collect data.
 
