@@ -79,21 +79,27 @@ function Draw-ImageCard($g, $x, $y, $blocked) {
   Fill-RoundedRect $g ($x + 34) ($y + 202) 64 26 13 ([System.Drawing.Color]::FromArgb(255, 38, 42, 58))
   Draw-Text $g "IMG" ($x + 48) ($y + 201) 18 ([System.Drawing.Color]::FromArgb(255, 245, 247, 252)) ([System.Drawing.FontStyle]::Bold)
 
-  $play = New-Object System.Drawing.Drawing2D.GraphicsPath
-  $play.AddPolygon(@(
-    (New-Object System.Drawing.PointF(($x + 184), ($y + 68))),
-    (New-Object System.Drawing.PointF(($x + 184), ($y + 134))),
-    (New-Object System.Drawing.PointF(($x + 244), ($y + 101)))
+  $glyphBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(235, 255, 255, 255))
+  $g.FillEllipse($glyphBrush, ($x + 80), ($y + 54), 34, 34)
+  $mountains = New-Object System.Drawing.Drawing2D.GraphicsPath
+  $mountains.AddPolygon(@(
+    (New-Object System.Drawing.PointF(($x + 88), ($y + 154))),
+    (New-Object System.Drawing.PointF(($x + 178), ($y + 78))),
+    (New-Object System.Drawing.PointF(($x + 248), ($y + 154)))
   ))
-  $playBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(235, 255, 255, 255))
-  $g.FillPath($playBrush, $play)
-  $playBrush.Dispose()
-  $play.Dispose()
+  $mountains.AddPolygon(@(
+    (New-Object System.Drawing.PointF(($x + 190), ($y + 154))),
+    (New-Object System.Drawing.PointF(($x + 286), ($y + 70))),
+    (New-Object System.Drawing.PointF(($x + 356), ($y + 154)))
+  ))
+  $g.FillPath($glyphBrush, $mountains)
+  $mountains.Dispose()
+  $glyphBrush.Dispose()
 
   if ($blocked) {
     Fill-RoundedRect $g $x $y 430 250 18 ([System.Drawing.Color]::FromArgb(235, 24, 27, 38))
     Draw-BlockSlash $g ($x + 108) ($y + 198) ($x + 322) ($y + 52) 28
-    Draw-Text $g "Hidden by Discord Image Blocker" ($x + 74) ($y + 106) 24 ([System.Drawing.Color]::FromArgb(255, 245, 247, 252)) ([System.Drawing.FontStyle]::Bold)
+    Draw-Text $g "Image hidden" ($x + 144) ($y + 106) 28 ([System.Drawing.Color]::FromArgb(255, 245, 247, 252)) ([System.Drawing.FontStyle]::Bold)
   }
 }
 

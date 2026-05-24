@@ -69,16 +69,24 @@ function Draw-MediaBubble($g, $x, $y, $w, $h, $scale, $showImageLabel) {
     $labelBrush.Dispose()
     $labelFont.Dispose()
   } else {
-    $play = New-Object System.Drawing.Drawing2D.GraphicsPath
-    $play.AddPolygon(@(
-      (New-Object System.Drawing.PointF(($x + $w * 0.42), ($y + $h * 0.33))),
-      (New-Object System.Drawing.PointF(($x + $w * 0.42), ($y + $h * 0.68))),
-      (New-Object System.Drawing.PointF(($x + $w * 0.68), ($y + $h * 0.50)))
+    $glyphBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(255, 41, 45, 59))
+    $sunSize = [Math]::Max(2, $scale * 0.07)
+    $g.FillEllipse($glyphBrush, ($x + $w * 0.24), ($y + $h * 0.25), $sunSize, $sunSize)
+
+    $mountains = New-Object System.Drawing.Drawing2D.GraphicsPath
+    $mountains.AddPolygon(@(
+      (New-Object System.Drawing.PointF(($x + $w * 0.22), ($y + $h * 0.70))),
+      (New-Object System.Drawing.PointF(($x + $w * 0.42), ($y + $h * 0.46))),
+      (New-Object System.Drawing.PointF(($x + $w * 0.54), ($y + $h * 0.70)))
     ))
-    $playBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(255, 41, 45, 59))
-    $g.FillPath($playBrush, $play)
-    $playBrush.Dispose()
-    $play.Dispose()
+    $mountains.AddPolygon(@(
+      (New-Object System.Drawing.PointF(($x + $w * 0.42), ($y + $h * 0.70))),
+      (New-Object System.Drawing.PointF(($x + $w * 0.65), ($y + $h * 0.40))),
+      (New-Object System.Drawing.PointF(($x + $w * 0.82), ($y + $h * 0.70)))
+    ))
+    $g.FillPath($glyphBrush, $mountains)
+    $mountains.Dispose()
+    $glyphBrush.Dispose()
 
     $dotBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(255, 88, 101, 242))
     $dotSize = [Math]::Max(2, $scale * 0.055)
