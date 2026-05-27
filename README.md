@@ -6,6 +6,12 @@
 
 A tiny Chrome extension that hides image media on `discord.com`.
 
+## Status
+
+Discord Image Blocker was published on the Chrome Web Store, then removed by an automated Chrome Web Store review for a "Spam and placement" policy issue.
+
+The extension remains open source and can still be installed manually for local use. Separate Chrome Web Store publication is paused to avoid presenting this project as a duplicate of related Discord media-blocking extensions. Future work may consolidate image and GIF blocking into one media-focused extension instead.
+
 ![Discord Image Blocker promotional image](assets/store/cws-marquee-promo-1400x560.png)
 
 ## Why

@@ -6,6 +6,12 @@ Discord Image Blocker exists because a Discord GIF Blocker user asked for the sa
 
 That request is the clearest market signal for this project. The extension is for people who want Discord to stop showing image media in chat, quietly and automatically.
 
+## Store Status
+
+Discord Image Blocker was briefly published on the Chrome Web Store and received a handful of installs on its first day. It was then removed by an automated Chrome Web Store review for a "Spam and placement" policy issue.
+
+The project is still useful as source code and as a manually installed extension, but separate store publication is paused. Because this project overlaps with Discord GIF Blocker, the cleaner long-term direction may be to consolidate image and GIF blocking into one media-blocking extension rather than maintain multiple small, similar Chrome Web Store listings.
+
 ## Product Shape
 
 The extension should stay small, predictable, and privacy-preserving.
