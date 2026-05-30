@@ -1,74 +1,84 @@
 # Discord Image Blocker
 
 [![Version](https://img.shields.io/badge/version-1.0.0-2ea44f)](CHANGELOG.md)
-[![License: GPL v3](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE.txt)
-[![No analytics](https://img.shields.io/badge/privacy-no%20analytics-brightgreen)](#privacy)
+[![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue)](LICENSE.txt)
+[![Privacy: no analytics](https://img.shields.io/badge/privacy-no%20analytics-brightgreen)](PRIVACY.md)
 
-A tiny Chrome extension that hides image media on `discord.com`.
+Discord Image Blocker is a tiny Chrome extension that hides image media on `discord.com`.
 
-## Status
-
-Discord Image Blocker was published on the Chrome Web Store, then removed by an automated Chrome Web Store review for a "Spam and placement" policy issue.
-
-The extension remains open source and can still be installed manually for local use. Separate Chrome Web Store publication is paused to avoid presenting this project as a duplicate of related Discord media-blocking extensions. Future work may consolidate image and GIF blocking into one media-focused extension instead.
+It is built for people who want a calmer Discord chat view with fewer visual distractions, without accounts, analytics, tracking, remote code, or a background service.
 
 ![Discord Image Blocker promotional image](assets/store/cws-marquee-promo-1400x560.png)
 
-## Why
-
-Discord Image Blocker hides image media in Discord chat when you want a calmer view with fewer visual distractions.
-
-The extension has one job, runs only on Discord, and does not collect data.
-
-## Install
-
-For local development or manual install:
-
-1. Download or clone this repository.
-2. Open `chrome://extensions`.
-3. Enable **Developer mode**.
-4. Click **Load unpacked**.
-5. Select this extension folder.
-
 ## Features
 
-- Hides image media that users send in Discord chat.
+- Hides image media rendered in Discord chat.
 - Runs only on `discord.com`.
+- Uses a small Manifest V3 content script.
 - Uses Chrome's built-in localization system.
-- Does not collect data or send analytics.
+- Does not collect, store, transmit, or sell data.
 - Does not use remote code.
+
+## Install Locally
+
+This extension is currently intended for manual installation.
+
+1. Download or clone this repository.
+2. Open `chrome://extensions` in Chrome.
+3. Enable **Developer mode**.
+4. Click **Load unpacked**.
+5. Select this repository folder.
+6. Refresh Discord.
 
 ## How It Works
 
-The content script watches Discord's web UI and hides image-related media containers when Discord renders them.
+Discord Image Blocker watches Discord's web UI for image media containers and hides them in the page.
 
-It does not:
+It does not read message contents, modify your Discord account, contact a server, or block Discord's backend. It only changes what is visible in your browser tab.
 
-- read or store your messages
-- modify your Discord account
-- send data anywhere
-- block Discord's backend directly
+## Privacy
 
-It only changes the visible web UI in your browser.
+Discord Image Blocker is local-only.
+
+- No analytics
+- No tracking
+- No remote server
+- No remote code
+- No data collection
+- No account or login
+
+See [PRIVACY.md](PRIVACY.md) for the full privacy policy.
+
+## Project Status
+
+Discord Image Blocker was briefly published on the Chrome Web Store, then removed by an automated Chrome Web Store review for a "Spam and placement" policy issue.
+
+The project remains open source and useful for local installation. Separate Chrome Web Store publication is paused while the longer-term direction is evaluated, including a possible consolidation with related Discord media-blocking extensions.
 
 ## Project Structure
 
 - `manifest.json` - Chrome extension manifest
-- `src/content/` - content script modules that hide image media on Discord
+- `src/content/` - content script modules
 - `_locales/` - localized extension name and description strings
-- `assets/icons/` - generated extension icons
-- `assets/store/` - generated Chrome Web Store promotional images
-- `store-listing/` - Chrome Web Store description copy split by locale
-- `docs/STORE_LISTING.md` - Chrome Web Store listing index
-- `docs/STORE_JUSTIFICATIONS.md` - single-purpose, host-permission, remote-code, and data-use justifications
-- `docs/PROJECT_PHILOSOPHY.md` - product scope and feature decision notes
+- `assets/icons/` - extension icons
+- `assets/store/` - Chrome Web Store promotional images and screenshots
+- `store-listing/` - Chrome Web Store listing copy by locale
+- `docs/` - project notes, store listing index, and review justifications
+- `tools/` - packaging and asset generation scripts
 - `PRIVACY.md` - privacy policy
-- `tools/generate-assets.ps1` - reproducible icon and promotional image generator
 - `LICENSE.txt` - GPL license text
 
 ## Development
 
-After making changes, reload the extension from `chrome://extensions` and refresh Discord.
+After making content script changes, reload the unpacked extension from `chrome://extensions` and refresh Discord.
+
+Check content script syntax:
+
+```powershell
+node --check src/content/constants.js
+node --check src/content/image-blocker.js
+node --check src/content/main.js
+```
 
 Regenerate icons and Chrome Web Store promotional images:
 
@@ -88,25 +98,12 @@ Create a Chrome Web Store upload package:
 powershell -NoProfile -ExecutionPolicy Bypass -File tools\package.ps1
 ```
 
-## Localization
+## Documentation
 
-The extension supports 50 locales through Chrome's `_locales` directory.
-
-Chrome Web Store listing copy is maintained separately in `store-listing/`, with [docs/STORE_LISTING.md](docs/STORE_LISTING.md) as the index.
-
-## Store Review
-
-Chrome Web Store permission and privacy justifications are documented in [docs/STORE_JUSTIFICATIONS.md](docs/STORE_JUSTIFICATIONS.md).
-
-## Project Philosophy
-
-Product scope and feature decisions are documented in [docs/PROJECT_PHILOSOPHY.md](docs/PROJECT_PHILOSOPHY.md).
-
-## Privacy
-
-Discord Image Blocker does not collect, store, or transmit any data. It has no analytics, no tracking, no remote server, and no remote code.
-
-See [PRIVACY.md](PRIVACY.md) for the full privacy policy.
+- [Project philosophy](docs/PROJECT_PHILOSOPHY.md)
+- [Chrome Web Store listing index](docs/STORE_LISTING.md)
+- [Chrome Web Store review justifications](docs/STORE_JUSTIFICATIONS.md)
+- [Privacy policy](PRIVACY.md)
 
 ## Support
 
@@ -117,4 +114,4 @@ If this extension saves you time and you want to support its development:
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0. See [LICENSE.txt](LICENSE.txt) for details.
+Licensed under GPL-3.0-or-later. See [LICENSE.txt](LICENSE.txt).
