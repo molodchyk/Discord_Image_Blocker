@@ -1,0 +1,74 @@
+# Chrome Web Store Listing
+
+Chrome Web Store description copy is split by locale for easy copy and paste:
+
+- [ar](../store-listing/ar.md)
+- [bg](../store-listing/bg.md)
+- [bn](../store-listing/bn.md)
+- [ca](../store-listing/ca.md)
+- [cs](../store-listing/cs.md)
+- [da](../store-listing/da.md)
+- [de](../store-listing/de.md)
+- [el](../store-listing/el.md)
+- [en](../store-listing/en.md)
+- [es](../store-listing/es.md)
+- [es_419](../store-listing/es_419.md)
+- [et](../store-listing/et.md)
+- [fa](../store-listing/fa.md)
+- [fi](../store-listing/fi.md)
+- [fil](../store-listing/fil.md)
+- [fr](../store-listing/fr.md)
+- [gu](../store-listing/gu.md)
+- [he](../store-listing/he.md)
+- [hi](../store-listing/hi.md)
+- [hr](../store-listing/hr.md)
+- [hu](../store-listing/hu.md)
+- [id](../store-listing/id.md)
+- [it](../store-listing/it.md)
+- [ja](../store-listing/ja.md)
+- [kn](../store-listing/kn.md)
+- [ko](../store-listing/ko.md)
+- [lt](../store-listing/lt.md)
+- [lv](../store-listing/lv.md)
+- [ml](../store-listing/ml.md)
+- [mr](../store-listing/mr.md)
+- [ms](../store-listing/ms.md)
+- [nl](../store-listing/nl.md)
+- [no](../store-listing/no.md)
+- [pl](../store-listing/pl.md)
+- [pt_BR](../store-listing/pt_BR.md)
+- [pt_PT](../store-listing/pt_PT.md)
+- [ro](../store-listing/ro.md)
+- [ru](../store-listing/ru.md)
+- [sk](../store-listing/sk.md)
+- [sl](../store-listing/sl.md)
+- [sv](../store-listing/sv.md)
+- [sw](../store-listing/sw.md)
+- [ta](../store-listing/ta.md)
+- [te](../store-listing/te.md)
+- [th](../store-listing/th.md)
+- [tr](../store-listing/tr.md)
+- [uk](../store-listing/uk.md)
+- [vi](../store-listing/vi.md)
+- [zh_CN](../store-listing/zh_CN.md)
+- [zh_TW](../store-listing/zh_TW.md)
+
+Promotional images:
+
+- [Small promo, 440x280](../assets/store/cws-small-promo-440x280.png)
+- [Marquee promo, 1400x560](../assets/store/cws-marquee-promo-1400x560.png)
+
+Upload package:
+
+- `dist/discord-image-blocker-1.0.0.zip`
+
+Screenshots, 1280x800 24-bit PNG:
+
+- [Images hidden automatically](../assets/store/screenshots/01-images-hidden.png)
+- [Images visible in chat](../assets/store/screenshots/02-images-visible.png)
+- [Privacy and minimal permissions](../assets/store/screenshots/03-privacy.png)
+
+Store review documentation:
+
+- [Store justifications](STORE_JUSTIFICATIONS.md)
+- [Privacy policy](../PRIVACY.md)

@@ -54,15 +54,15 @@ It only changes the visible web UI in your browser.
 ## Project Structure
 
 - `manifest.json` - Chrome extension manifest
-- `content.js` - content script that hides image media on Discord
+- `src/content/` - content script modules that hide image media on Discord
 - `_locales/` - localized extension name and description strings
 - `assets/icons/` - generated extension icons
 - `assets/store/` - generated Chrome Web Store promotional images
 - `store-listing/` - Chrome Web Store description copy split by locale
-- `STORE_LISTING.md` - Chrome Web Store listing index
-- `STORE_JUSTIFICATIONS.md` - single-purpose, host-permission, remote-code, and data-use justifications
+- `docs/STORE_LISTING.md` - Chrome Web Store listing index
+- `docs/STORE_JUSTIFICATIONS.md` - single-purpose, host-permission, remote-code, and data-use justifications
+- `docs/PROJECT_PHILOSOPHY.md` - product scope and feature decision notes
 - `PRIVACY.md` - privacy policy
-- `PROJECT_PHILOSOPHY.md` - product scope and feature decision notes
 - `tools/generate-assets.ps1` - reproducible icon and promotional image generator
 - `LICENSE.txt` - GPL license text
 
@@ -92,15 +92,15 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools\package.ps1
 
 The extension supports 50 locales through Chrome's `_locales` directory.
 
-Chrome Web Store listing copy is maintained separately in `store-listing/`, with [STORE_LISTING.md](STORE_LISTING.md) as the index.
+Chrome Web Store listing copy is maintained separately in `store-listing/`, with [docs/STORE_LISTING.md](docs/STORE_LISTING.md) as the index.
 
 ## Store Review
 
-Chrome Web Store permission and privacy justifications are documented in [STORE_JUSTIFICATIONS.md](STORE_JUSTIFICATIONS.md).
+Chrome Web Store permission and privacy justifications are documented in [docs/STORE_JUSTIFICATIONS.md](docs/STORE_JUSTIFICATIONS.md).
 
 ## Project Philosophy
 
-Product scope and feature decisions are documented in [PROJECT_PHILOSOPHY.md](PROJECT_PHILOSOPHY.md).
+Product scope and feature decisions are documented in [docs/PROJECT_PHILOSOPHY.md](docs/PROJECT_PHILOSOPHY.md).
 
 ## Privacy
 

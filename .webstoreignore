@@ -2,6 +2,7 @@
 .gitignore
 .webstoreignore
 assets/store/
+docs/
 store-listing/
 tools/
 dist/
@@ -9,5 +10,3 @@ dist/
 CHANGELOG.md
 PRIVACY.md
 README.md
-STORE_JUSTIFICATIONS.md
-STORE_LISTING.md
